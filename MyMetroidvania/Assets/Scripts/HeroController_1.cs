@@ -7,11 +7,14 @@ public class HeroController_1 : MonoBehaviour
     [SerializeField] private float speed_;                  //"SerializeField" significa que desde el inspector podemos  manipular o ver su valor.
     [SerializeField] private Vector2 movementDirection;     //"SerializeField" significa que desde el inspector podemos  manipular o ver su valor.
     private Rigidbody2D rigidbody2D_;                       //Variable de instanciamiento
+    [SerializeField] private float jumpForce;
+    private bool jumpPressed = false;
 
-                      
+
     void Start()
     {
         rigidbody2D_ = GetComponent<Rigidbody2D>();         //Instanciando la variable.
+        jumpPressed = Input.GetButtonDown("Jump");
     }
 
     // Update is called once per frame
@@ -19,12 +22,14 @@ public class HeroController_1 : MonoBehaviour
     {
         HandleControls();                                    //invocando el método "HandleControls" (abre el puerto de entrada del teclado)
         HandleMovement();                                    //invocando el método "HandleMovement" (multiplica el valor de "x" por "speed".
-        HandleFlip();                                       //invocando el método "HandleFlip" (rota el personaje a la izquierda o a la derecha)
+        HandleFlip();
+        HandleJump();                                         //invocando el método "HandleFlip" (rota el personaje a la izquierda o a la derecha)
     }
 
     void HandleControls()
     {
         movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        jumpPressed = Input.GetButtonDown("Jump");
 
     }
 
@@ -46,4 +51,14 @@ public class HeroController_1 : MonoBehaviour
             }
         }
     }
+
+    void HandleJump()           //Método para agregarle fuerza la RigidBody del Hero
+     {
+         
+         if (jumpPressed)        //si la barra espaciadora es apretada.....
+            
+         {
+             this.rigidbody2D_.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);//agrega impulso de fuerza instantanea hacia arriba           
+         }
+     }
 }
