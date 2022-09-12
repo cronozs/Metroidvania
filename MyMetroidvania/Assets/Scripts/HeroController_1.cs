@@ -90,8 +90,15 @@ void HandleControls()
         if(jumpPressed && playerIsOnGround)
             
         {
-             this.rigidbody2D_.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-             animatorController.Play(AnimationId.Jump);
+            this.rigidbody2D_.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animatorController.Play(AnimationId.Jump);
+            StartCoroutine(HandleJumpAnimation());
         }
     }
+
+    IEnumerator HandleJumpAnimation()
+     {
+         yield return new WaitForSeconds(0.4f);
+         animatorController.Play(AnimationId.PrepararBrinco);
+     }
 }
