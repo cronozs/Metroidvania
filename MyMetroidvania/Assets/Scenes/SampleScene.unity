@@ -1735,6 +1735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c8125773851974fa0b53026fc03ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorController: {fileID: 0}
+  footA: {fileID: 316399038}
+  footB: {fileID: 1772502602}
+  jumpForce: 13
   speed_: 6
   movementDirection: {x: 0, y: 0}
-  jumpForce: 13
