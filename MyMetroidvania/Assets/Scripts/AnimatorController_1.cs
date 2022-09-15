@@ -27,6 +27,5 @@ public class AnimatorController_1 : MonoBehaviour
     {
         animator.Play(animationId.ToString());      //Ejecuta la animacion gurdada en "animationID"
         
-        
     }
 }

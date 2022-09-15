@@ -1751,6 +1751,9 @@ MonoBehaviour:
   animatorController: {fileID: 1828944925}
   footA: {fileID: 316399038}
   footB: {fileID: 1772502602}
+  canDoubleJump: 0
+  canCheckGround: 0
+  doubleJumpForce: 0
   jumpForce: 15
   speed_: 13
   movementDirection: {x: 0, y: 0}
