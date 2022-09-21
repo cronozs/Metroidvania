@@ -11,7 +11,8 @@ public enum AnimationId                 //Definimos un enumerado
     Run = 1,
     Jump = 2,
     PrepararBrinco = 3,
-    Brincar = 4
+    Brincar = 4,
+    Attack = 5
  }
 
 public class AnimatorController_1 : MonoBehaviour

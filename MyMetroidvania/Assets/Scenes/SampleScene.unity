@@ -688,7 +688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316399036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.101, y: 0.02, z: -0.021920944}
+  m_LocalPosition: {x: -0.173, y: 0.02, z: -0.021920944}
   m_LocalScale: {x: 0.23085895, y: 0.23085895, z: 0.23085895}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1752,8 +1752,10 @@ MonoBehaviour:
   footA: {fileID: 316399038}
   footB: {fileID: 1772502602}
   canDoubleJump: 0
+  playerIsAttacking: 0
   canCheckGround: 0
-  doubleJumpForce: 0
+  canMove: 0
+  doubleJumpForce: 15
   jumpForce: 15
   speed_: 13
   movementDirection: {x: 0, y: 0}
